@@ -3,9 +3,13 @@ import React from "react";
 import NotificationCard from "./_components/NotificationCard";
 import EventCard from "./_components/EventCard";
 
-const page = ({ searchParams }: { searchParams: { type?: string } }) => {
-  const type = searchParams.type === "old" ? "old" : "new";
-
+export default async function Page({
+  searchParams,
+}: {
+  searchParams: Promise<{ type?: string }>;
+}) {
+  const { type } = await searchParams;
+  const pageType = type === "old" ? "old" : "new";
   return (
     <div className=" bg-backgroundSec py-20 flex flex-col min-h-screen ">
       <div className=" fixed z-50 top-0 left-0 w-full bg-background flex justify-between items-center rounded-b-3xl px-4 py-5">
@@ -13,7 +17,7 @@ const page = ({ searchParams }: { searchParams: { type?: string } }) => {
           <Link
             href={"/notification?type=new"}
             className={` ${
-              type == "new"
+              pageType == "new"
                 ? "text-white bg-primary"
                 : "text-primary bg-transparent"
             } border-none  font-normal text-sm p-2 outline-none  rounded-lg`}
@@ -23,7 +27,7 @@ const page = ({ searchParams }: { searchParams: { type?: string } }) => {
           <Link
             href={"/notification?type=old"}
             className={` border-none  font-normal text-sm p-2 outline-none rounded-lg ${
-              type == "old"
+              pageType == "old"
                 ? "text-white bg-primary"
                 : "text-primary bg-transparent"
             }`}
@@ -45,7 +49,7 @@ const page = ({ searchParams }: { searchParams: { type?: string } }) => {
         </div>
       </div>
       <div className=" space-y-3 mt-4 mx-4">
-        {type == "new" && (
+        {pageType == "new" && (
           <>
             {" "}
             <NotificationCard />
@@ -68,7 +72,7 @@ const page = ({ searchParams }: { searchParams: { type?: string } }) => {
             <NotificationCard />
           </>
         )}
-        {type == "old" && (
+        {pageType == "old" && (
           <>
             <EventCard />
             <EventCard />
@@ -87,6 +91,4 @@ const page = ({ searchParams }: { searchParams: { type?: string } }) => {
       </div>
     </div>
   );
-};
-
-export default page;
+}

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Reviews = () => {
@@ -5,7 +6,7 @@ const Reviews = () => {
     <div>
       <div className=" px-2.5 text-primary font-medium mb-2.5 flex items-center justify-between">
         <span>تقييمات الإسبوع الحالي</span>
-        <span>المزيد</span>
+        <Link href={"/history"}>المزيد</Link>
       </div>
       <div className=" grid sm:grid-cols-2 place-items-center md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-4">
         <div className=" text-primary w-48 pt-4 h-fit border border-solid border-background rounded-xl bg-backgroundSec ">

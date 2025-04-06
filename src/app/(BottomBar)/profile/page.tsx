@@ -57,7 +57,10 @@ const Page = () => {
               <path d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z" />
             </svg>
           </div>
-          <p className=" text-black text-lg" onClick={() => setAddPhone(true)}>
+          <p
+            className="cursor-pointer text-black text-lg"
+            onClick={() => setAddPhone(true)}
+          >
             إضافة رقم هاتف جديد
           </p>
         </div>{" "}
@@ -74,7 +77,10 @@ const Page = () => {
               <path d="M360-600v-80h360v80H360Zm0 120v-80h360v80H360Zm120 320H200h280Zm0 80H240q-50 0-85-35t-35-85v-120h120v-560h600v361q-20-2-40.5 1.5T760-505v-295H320v480h240l-80 80H200v40q0 17 11.5 28.5T240-160h240v80Zm80 0v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q8 9 12.5 20t4.5 22q0 11-4 22.5T903-300L683-80H560Zm300-263-37-37 37 37ZM620-140h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
             </svg>
           </div>
-          <p onClick={() => setIsOpen(true)} className=" text-black text-lg">
+          <p
+            onClick={() => setIsOpen(true)}
+            className=" cursor-pointer text-black text-lg"
+          >
             تسجيل شكوى
           </p>
         </div>{" "}

@@ -19,7 +19,7 @@ const AddPhone: React.FC<AddPhoneProps> = ({ isOpen, onClose }) => {
         onClick={onClose}
         className=" bg-black opacity-10 -z-10 absolute top-0 left-0 w-full h-full"
       />
-      <div className="bg-background rounded-2xl flex flex-col items-center justify-center p-4 w-80 sm:w-96 h-fit shadow-lg">
+      <div className="bg-background rounded-2xl flex flex-col items-center justify-center p-4  py-6 w-80 sm:w-96 h-fit shadow-lg">
         <div className=" text-backgroundSec w-12 flex items-center justify-center rounded-full h-12 bg-primary">
           <svg
             xmlns="http://www.w3.org/2000/svg"

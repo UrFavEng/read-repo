@@ -21,7 +21,7 @@ const EventCard = () => {
       <div className=" flex-1">
         <h4 className=" text-lg font-bold text-primary">العنوان</h4>
         <p className=" text-primary">هنا وصف الإشعار المرغوب به</p>
-        <div className=" bg-[#EAE1D6] gap-y-1.5 mt-1.5 grid-cols-2 grid p-2 rounded-xl w-full">
+        <div className=" bg-[#EAE1D6] text-primary gap-y-1.5 mt-1.5 grid-cols-2 grid p-2 rounded-xl w-full">
           <p className=" text-[13px] sm:text-sm">تاريخ الحدث: 05/10/2024</p>
           <p className=" text-[13px]  sm:text-sm">المستضيف: ش. محمد جلال</p>
           <p className=" text-[13px]  sm:text-sm">الموعد: الخميس - 02:20 م</p>

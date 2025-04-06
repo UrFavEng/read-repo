@@ -1,6 +1,7 @@
 import React from "react";
 import historyImage from "../../../public/image 31.svg";
 import Image from "next/image";
+import BackBtn from "@/components/BackBtn";
 const page = () => {
   return (
     <div className=" bg-backgroundSec flex flex-col min-h-screen pb-4">
@@ -11,18 +12,7 @@ const page = () => {
           </div>
           <div className=" text-lg font-bold text-primary">سجل الحفظ</div>
         </div>
-        <div className=" bg-primary px-3 py-2 rounded-lg">
-          <svg
-            className=" cursor-pointer"
-            xmlns="http://www.w3.org/2000/svg"
-            height="30px"
-            viewBox="0 -960 960 960"
-            width="30px"
-            fill="#be9159"
-          >
-            <path d="M360-240 120-480l240-240 56 56-144 144h568v80H272l144 144-56 56Z" />
-          </svg>
-        </div>
+        <BackBtn />
       </div>
       <div className=" space-x-3 mt-4 mx-4">
         <span className=" text-primary text-sm font-medium">من :</span>
